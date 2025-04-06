@@ -1,0 +1,371 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .top-right {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+header .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .logo {
+    width: 150px;
+}
+
+/* Estilos para los botones de usuario */
+.top-right button {
+    background-color: #005f99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.top-right button:hover {
+    background-color: #007acc;
+}
+
+/* Estilos para los modales */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 0.7rem;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background-color: #005f99;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    background-color: #005f99;
+    border-radius: 5px;
+}
+
+/* Opciones de usuario */
+.top-right button {
+    background-color: #005f99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.top-right button:hover {
+    background-color: #007acc;
+}
+
+/* Contenedor de las cartas */
+.jornadas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Estilo de las cartas */
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card h3 {
+    background-color: #005f99;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+}
+
+/* Contenedor general para la última jornada */
+.ultima-jornada-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilo de cada partido */
+.partido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6f3ff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.partido:hover {
+    background-color: #d0e7ff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Información del partido */
+.info-partido {
+    flex: 2;
+    text-align: left;
+}
+
+.info-partido h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #003366;
+}
+
+.info-partido p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Resultado del partido */
+.resultado {
+    flex: 1;
+    text-align: right;
+    font-size: 1.2rem;
+    color: #005f99;
+    font-weight: bold;
+}
+
+/* Tabla de clasificación */
+.tabla-clasificacion {
+    width: 80%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-clasificacion th {
+    background-color: #003366; /* Azul oscuro */
+    color: white;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.tabla-clasificacion td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+.tabla-clasificacion tr:nth-child(even) {
+    background-color: #e6f3ff; /* Azul claro para las filas pares */
+}
+
+.tabla-clasificacion tr:hover {
+    background-color: #d0e7ff; /* Color más claro al pasar el mouse */
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Ajustar el ancho de la columna de posición */
+.tabla-clasificacion th:first-child, .tabla-clasificacion td:first-child {
+    width: 5%; /* Más compacto */
+    text-align: center;
+}
+
+/* Ajuste del escudo en la columna del equipo */
+.escudo {
+    width: 30px; /* Tamaño pequeño para mantener la estética */
+    height: auto;
+    margin-right: 0.5rem; /* Espacio entre el escudo y el nombre del equipo */
+    vertical-align: middle; /* Alinea la imagen con el texto */
+}
+
+/* Contenedor para las tablas */
+.estadisticas-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Estilo específico para cada tabla */
+.tabla-goles, .tabla-asistencias {
+    flex: 1;
+}
+
+/* Estilo de las tablas (ya existente) */
+.tabla-estadisticas {
+    width: 100%; /* Para ajustar el ancho dentro de sus contenedores */
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-estadisticas th {
+    background-color: #005f99; /* Azul intermedio */
+    color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.tabla-estadisticas td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-estadisticas tr:nth-child(even) {
+    background-color: #e6f3ff; /* Azul claro para las filas pares */
+}
+
+.tabla-estadisticas tr:hover {
+    background-color: #d0e7ff; /* Color más claro al pasar el mouse */
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Secciones generales */
+section {
+    padding: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+section:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
