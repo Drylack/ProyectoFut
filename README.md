@@ -1,1 +1,0 @@
-Este proyecto es para empezar Git y Github con un proyecto web html y css basico
